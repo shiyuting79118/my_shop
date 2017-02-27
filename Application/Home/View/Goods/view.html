@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<h1>商品{$id}</h1>
+
+<form action="{:U('cart/add')}" method="post">
+    <input type="hidden" name="goods_id" value="{$id}">
+    <input type="text" name="qty" value="1">
+    <input type="submit" value="确定">
+</form>
+
+</body>
+</html>

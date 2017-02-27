@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    {$order.name}
+     ￥{$order.total_fee}
+
+    物流状态<?=\Home\Model\Order::getDeliveryStatusStr($order['delivery_status'])?>
+
+    <ul>
+        <foreach name="orderItem" item="vo">
+            <li>{$vo.id}  {$vo.name}  {$vo.price}  {$vo.quantity}</li>
+        </foreach>
+    </ul>
+</body>
+</html>
